@@ -1,0 +1,206 @@
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../assets/fonts/JosefinSans-VariableFont_wght.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: url("../assets/images/bg-pattern-desktop.svg"), linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%);
+    font-family: "Josefin Sans";
+    overflow: hidden;
+}
+
+.b-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.b-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding-right: 3.5rem;
+    max-width: 500px;
+    height: 100%;
+}
+
+header {
+    margin-top: 4rem;
+}
+
+header img {
+    width: fit-content;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.b-hero__mobile {
+    display: none;
+}
+
+.b-title {
+    margin-bottom: 1.5rem;
+    font-size: 3.7rem;
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+    letter-spacing: 1.3rem;
+    line-height: 115%;
+}
+
+.b-title strong {
+    font-weight: 600;
+    color: hsl(0, 6%, 24%);
+}
+
+.b-text {
+    margin-bottom: 2.5rem;
+    color: hsl(0, 36%, 70%);
+    line-height: 180%;
+}
+
+.b-form {
+    position: relative;
+    margin-bottom: 0.4rem;
+}
+
+.b-form__email {
+    padding: 1rem 7rem 1rem 2rem;
+    width: 100%;
+    background: transparent;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 50px;
+    font-family: "Josefin Sans";
+    font-weight: 500;
+    font-size: 1rem;
+    color:hsl(0, 6%, 24%);
+}
+
+.b-form__email::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+.b-form__email--error {
+    background-image: url("../assets/images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: right 6.5rem center;
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+.b-form__submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 2.5rem;
+    height: 100%;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.b-form__submit:hover {
+    cursor: pointer;
+}
+
+.b-form__error-msg {
+    padding-left: 2rem;
+    font-size: 0.8rem;
+    color:hsl(0, 93%, 68%);
+}
+
+.b-hero__desktop {
+    align-self: flex-end;
+    height: 100%;
+}
+
+.b-hero__desktop img {
+    height: 100%;
+}
+
+@media screen and (max-width: 940px) {
+    body {
+        display: flex;
+        min-height: 100vh;
+        height: auto;
+        background-image: none;
+        overflow: auto;
+    }
+    
+    .b-container {
+        padding: 0 2rem;
+        width: 100%;
+    }
+    
+    header {
+        margin: 2rem 0;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    .b-main {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .b-hero__mobile {
+        display: block;
+        margin-bottom: 3.5rem;
+        width :100%;
+    }
+    
+    .b-title {
+        font-size: 2.3rem;
+        letter-spacing: 0.8rem;
+        line-height: 110%;
+        text-align: center;
+    }
+    
+    .b-text {
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .b-form__email {
+        padding: 1rem 4.5rem 1rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .b-form__email--error {
+        padding-right: 7rem;
+        background-position: right 4.5rem center;
+    }
+    
+    .b-form__submit {
+        padding: 0 1.5rem;
+    }
+    
+    .b-form__error-msg {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .b-hero__desktop {
+        display: none;
+    }
+}
